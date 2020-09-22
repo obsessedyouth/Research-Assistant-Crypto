@@ -1,6 +1,6 @@
 # 2. Computer Science
 
-1. Why is it a bad idea to use recursion method to find the fibonacci of a number?
+- Why is it a bad idea to use recursion method to find the fibonacci of a number?
 
 ## answer
 This is a *trick* question.
@@ -18,11 +18,21 @@ This is only *one* kind of recursion called the body recursive, which uses the c
  more efficient in 
  [this gist I created a while back :)](https://gist.github.com/obsessedyouth/d504a391164ee71b06960a3a753ea2af)
  
-2. Write a function that takes in a Proth Number and uses Proth's theorem to determine if said number is prime? You can write this in any programming language but C/C++/Golang are preferred
+ - Write a function that takes in a Proth Number and uses Proth's theorem to determine if said number is prime?
+ You can write this in any programming language but C/C++/Golang are preferred
 ## answer
-I did not know Go before implementing this problem, however I've been meaning to try it. Here goes nun.
-You can find each solution in the `solutions` folder with appropriates tests. Or you can scan through
-here. Multiple implementations in `Go` `Python` & `Elixir`. I personally prefer the Elixir :smiling_imp: 
+I did not know Go before implementing this problem, however I've been meaning to try it.
+You can find each solution script in the `solutions` folder with complementary tests in the `tests` folder. 
+Or you can scan through the code snippets here. Multiple implementations in `Go` `Python` & `Elixir`. 
+I prefer, if possible to write Elixir :smile_cat: 
+
+### To run tests
+`cd` into the `test` directory:
+
+1. Python - assuming you have >= `python3.7.x` in your terminal `pytest`.
+2. Elixir - assuming you have >= `Erlang/OTP 21` & `Elixir 1.9.2` in your terminal 
+`elixir -r ../solutions/proth_theorem.ex proth_theorem_test.exs`
+3. Go - assuming you have >= `go1.15` enter `go test`
 
 ### Go
 ```go
@@ -35,14 +45,14 @@ func main() {
 
 ### Python
 ```python
-def Proth():
+def proth():
   pass
 ```
 
 ### Elixir
 ```elixir
-defmodule Proth do
-  def compute do
+defmodule ProthTheorem do
+  def proth do
  end
 end
 ```
