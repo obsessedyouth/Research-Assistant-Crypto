@@ -21,6 +21,13 @@ This is only *one* kind of recursion called the body recursive, which uses the c
  - Write a function that takes in a Proth Number and uses Proth's theorem to determine if said number is prime?
  You can write this in any programming language but C/C++/Golang are preferred
 ## answer
+This is an interesting one. I have solved the `sieve of eratosthenes` before in javascript, but I've never seen 
+this one, apparently it is inadequate for large numbers beyond 30 digits, it is also *particularly difficult* 
+to find an implementation to copy/paste, cute. Whoever decided to test on this algorithm gets points, it's roughly
+about as difficult as the `matrix method` for solving fibs, but not as popular.
+However the text `Prime Numbers and Computer Methods for Factorization pg.104 by Hans Riesel` has the secrets explained 
+in great detail :smirk: still though took me a non-trivial amount of time to implement.
+ 
 I did not know Go before implementing this problem, however I've been meaning to try it.
 You can find each solution script in the `solutions` folder with complementary tests in the `tests` folder. 
 Or you can scan through the code snippets here. Multiple implementations in `Go` `Python` & `Elixir`. 

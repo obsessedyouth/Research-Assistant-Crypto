@@ -2,6 +2,23 @@
 
 Okay, Let's try this and see how far we can get :)
 
+## Rating the problems
+- basic(easy or little effort) :sleeping: :sleeping: 
+- interesting (kept me occupied for a little while, enjoyed it) :100: :100: :100: 
+- challenging (difficult, completely new territory) :cry: :cry: :cry: 
+
+## Solutions
+(1) [Finance]()
+ - (challenging) TODO: no idea lololol
+ - (challenging) TODO: wtf?
+ 
+(2) [Computer Science]()
+ - basic implemented
+ - interesting (reading about the theory)
+ 
+(3) [Maths]()
+ - basic TODO: implemented on paper convert to tex tomorrow
+
 BSD 3-Clause License
 
 Copyright (c) 2020, Haile Lagi
