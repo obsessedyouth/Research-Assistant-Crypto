@@ -3,3 +3,6 @@
 
 # ignore local IDE settings
 .idea/
+
+# ignore pytest cache
+__pycache__
