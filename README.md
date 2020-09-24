@@ -8,15 +8,15 @@ Okay, Let's try this and see how far we can get :)
 - challenging (difficult, completely new territory) :cry: :cry: :cry: 
 
 ## Solutions
-(1) [Finance]()
+(1) [Finance](https://github.com/obsessedyouth/Research-Assistant-Crypto/blob/main/Finance.md)
  - (challenging) TODO: no idea lololol
  - (challenging) TODO: wtf?
  
-(2) [Computer Science]()
+(2) [Computer Science](https://github.com/obsessedyouth/Research-Assistant-Crypto/blob/main/Computer_Science.md)
  - basic implemented
  - interesting (reading about the theory)
  
-(3) [Maths]()
+(3) [Maths](https://github.com/obsessedyouth/Research-Assistant-Crypto/blob/main/Maths.md)
  - basic TODO: implemented on paper convert to tex tomorrow
 
 BSD 3-Clause License
