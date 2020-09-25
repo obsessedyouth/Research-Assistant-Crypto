@@ -6,3 +6,6 @@
 
 # ignore pytest cache
 __pycache__
+
+# and this one
+.pytest_cache

@@ -9,15 +9,15 @@ Okay, Let's try this and see how far we can get :)
 
 ## Solutions
 (1) [Finance](https://github.com/obsessedyouth/Research-Assistant-Crypto/blob/main/Finance.md)
- - (challenging) TODO: no idea lololol
- - (challenging) TODO: wtf?
+ - :cry: :cry: :cry: 
+ - :cry: :cry: :cry: 
  
 (2) [Computer Science](https://github.com/obsessedyouth/Research-Assistant-Crypto/blob/main/Computer_Science.md)
- - basic implemented
- - interesting (reading about the theory)
+ - :sleeping: :sleeping: 
+ - :100: :100: :100:
  
 (3) [Maths](https://github.com/obsessedyouth/Research-Assistant-Crypto/blob/main/Maths.md)
- - basic TODO: implemented on paper convert to tex tomorrow
+ - basic :sleeping: :sleeping: 
 
 BSD 3-Clause License
 

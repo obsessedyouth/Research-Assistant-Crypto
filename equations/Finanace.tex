@@ -1,1 +1,52 @@
+\documentclass{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{parskip}
+\usepackage{graphicx}
+
+% Margins
+\usepackage[top=2.5cm, left=3cm, right=3cm, bottom=4.0cm]{geometry}
+% Colour table cells
+\usepackage[table]{xcolor}
+
+% Get larger line spacing in table
+\newcommand{\tablespace}{\\[1.25mm]}
+\newcommand\Tstrut{\rule{0pt}{2.6ex}}         % = `top' strut
+\newcommand\tstrut{\rule{0pt}{2.0ex}}         % = `top' strut
+\newcommand\Bstrut{\rule[-0.9ex]{0pt}{0pt}}   % = `bottom' strut
+
+%%%%%%%%%%%%%%%%%
+%     Title     %
+%%%%%%%%%%%%%%%%%
+\title{Research Assistant Crypto Response}
+\author{Haile Lagi}
+\date{September 26, 2020}
+
+\begin{document}
+\maketitle
+
+%%%%%%%%%%%%%
+% Finance   %
+%%%%%%%%%%%%%
+
+\section{Finance}
+Yara Inc is listed on the NYSE with a stock price of 40 - the company is not known
+to pay dividends. We need to price a call option with a strike of \$45 maturing in
+4 months.
+The continuously-compounded risk-free rate is 3\%/year, the mean return on the
+stock is 7\%/year, and the standard deviation of the stock return is 40\%/year.
 What is the Black-Scholes call price?
+
+Given that the black-scholes model is
+\begin{align}
+    \label{eq:black_scholes} % black-scholes model
+    N(x) = \frac{1}{\sqrt(2\pi)}\int_{-\infty }^{x}e^{\frac{-x^2}{2}}dz
+\end{align}
+
+Let's dig in!!!!!! :)
+
+So the solutions are $y=some value$ and $x = some value$.
+
+\end{document}

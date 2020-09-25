@@ -23,23 +23,39 @@ This is only *one* kind of recursion called the body recursive, which uses the c
 ## answer
 This is an interesting one. I have solved the `sieve of eratosthenes` before in javascript, but I've never seen 
 this one, apparently it is inadequate for large numbers beyond 30 digits, it is also *particularly difficult* 
-to find an implementation to copy/paste, cute. Whoever decided to test on this algorithm gets points, it's roughly
-about as difficult as the `matrix method` for solving fibs, but not as popular.
-However the text `Prime Numbers and Computer Methods for Factorization pg.104 by Hans Riesel` has the secrets explained 
-in great detail :smirk: still though took me a non-trivial amount of time to implement.
- 
-I did not know Go before implementing this problem, however I've been meaning to try it.
-You can find each solution script in the `solutions` folder with complementary tests in the `tests` folder. 
-Or you can scan through the code snippets here. Multiple implementations in `Go` `Python` & `Elixir`. 
-I prefer, if possible to write Elixir :smile_cat: 
+to find a direct implementation to copy/paste, cute. Whoever decided to test on this algorithm gets points, it's roughly
+about as difficult as the `matrix method` for solving fibs, but not as popular, yet relies on the same fundamental
+pseudo esoteric concept of matrix multiplication which is actually very popular in 
+[certain niches](https://www.geeksforgeeks.org/top-algorithms-and-data-structures-for-competitive-programming/).
+If I for example had a background in cryptography before seeing this, it would have been a basic question and not very
+interesting. However the text `Prime Numbers and Computer Methods for Factorization pg.104 by Hans Riesel`
+has the secrets explained in great detail :smirk: still though took me a non-trivial amount of time to find though.
+It's not obvious at first, since after all, once you solve for `(a ** (n -1)/2 mod n) ** (n -1)/2 mod n == -1 mod n` 
+you can easily test for primacy. **which technically is a correct solution as is** if it wasn't so god damn slow.
+but there are implementations that are actually *very easy* to copy//paste provided you know what to look for.
+For example using the `extended Euclidean algorithm` or the 
+[binary shift](https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/fast-modular-exponentiation)
+ method can be adapted to this. I was too lazy make multiple approach implementations
+ lolol but I'm starting to run out of time. I might add this to this repo regardless if I get the job. Might be useful
+ for my final year project? idk yet.
+
+I did not know Go before implementing this problem, however I've been meaning to try it a little idk if I really wanna
+commit to new language atm though, ig this is a good excuse to test the waters, but really? no `map` or `filter`?
+first impressions weird, wtf, idk about this idk fr.
+You can find each implementation script in the `solutions` folder, with comments describing "why" not "how". 
+Complementary tests in the `tests` folder. Or you can scan through the no comment code snippets here. 
+Multiple implementations in `Go` `Python` & `Elixir`. I prefer, if possible to write Elixir atm :smile_cat: 
 
 ### To run tests
+Test values gotten from [here](http://www.numbersaplenty.com/set/Proth_number/) and 
+verified with the `first 40 proth numbers`.
+
 `cd` into the `test` directory:
 
 1. Python - assuming you have >= `python3.7.x` in your terminal `pytest`.
-2. Elixir - assuming you have >= `Erlang/OTP 21` & `Elixir 1.9.2` in your terminal 
+2. Elixir - assuming you have >= `Erlang/OTP 21` & `Elixir 1.9.x` in your terminal 
 `elixir -r ../solutions/proth_theorem.ex proth_theorem_test.exs`
-3. Go - assuming you have >= `go1.15` enter `go test`
+3. Go - assuming you have >= `go1.1x` enter `go test`
 
 ### Go
 ```go

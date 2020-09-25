@@ -22,7 +22,7 @@
 %%%%%%%%%%%%%%%%%
 \title{Research Assistant Crypto Response}
 \author{Haile Lagi}
-\date{September 22, 2020}
+\date{September 25, 2020}
 
 \begin{document}
 \maketitle
@@ -36,11 +36,89 @@
     \label{eq:obj_fn} % Equation label; can be used for referencing
     y = \sqrt{(x+6)^2 + 25)} + \sqrt{(x-6)^2 + 121} \,.
 \end{align}
-This $some equation$ and apply it to Equation~\ref{eq:obj_fn}. This gives us
+
+To find a stationary point(in this case mininum) for \ref{eq:obj_fn} the procedure is as follows:
+\begin{enumerate}
+\item Given y = f(x) find f'(x)
+\item Let $\frac{dy}{dx}=0$ and solve for the x value(s).
+\item find the corresponding y value(s).
+\item Determine the nature of the equation using:
+\begin{itemize}
+\item Second derivative and substitute x if x is positive, negative or zero
+\end{itemize}
+\begin{itemize}
+\item Alternatively, find gradient before and after the stationary + to -, - to - or + to +
+\end{itemize}
+\end{enumerate}
+
+First we simplify \ref{eq:obj_fn} by expanding the polynomials of the form
+$(x + c)^n$ and we have
 
 \begin{align}
+    \label{eq: linear}
+    y = \sqrt{(x+6)(x+6) + 25)} + \sqrt{(x-6)(x-6) + 121}
+    = \sqrt{x^2+12x+61} + \sqrt{x^2 - 12x + 157} \,.
 \end{align}
 
-So the solutions are $y=some value$ and $x = some value$.
+To find f'(x) using chain rule, in an equation of the form
+$\frac{dy}{dx}=u^n$ where u is function of x and n is some exponent this holds
+$\frac{dy}{dx}=\frac{dy}{du} * \frac{du}{dx}$. Divide equation \ref{eq: linear}
+into two parts $y = y_{1} + y_{2}$ where
+
+\begin{align}
+    \label{eq: linear_one}
+    y_{1} = \sqrt{x^2+12x+61}  \,.
+\end{align}
+
+\begin{align}
+\label{eq: linear_two}
+    y_{2} = \sqrt{x^2 - 12x + 157} \,.
+\end{align}
+
+Applying the chain rule in \ref{eq: linear_one} and \ref{eq: linear_two}
+\begin{align}
+    \label{eq: y_one}
+    \frac{dy_{1}}{dx} = u^\frac{1}{2} \,.
+\end{align}
+
+where $u_{1} = x^2 + 12x + 61$ and $\frac{du_{1}}{dx} = 2x + 12$
+
+\begin{align}
+    \label{eq: y_two}
+    \frac{dy_{2}}{dx} = u^\frac{1}{2} \,.
+\end{align}
+
+where $u_{2} = x^2 - 12x - 12x + 157$ and $\frac{du_{2}}{dx} = 2x - 12$
+
+Combining \ref{eq: y_one} and \ref{eq: y_two} we have \ref{eq: diffed}
+
+\begin{align}
+    \label{eq: diffed}
+\frac{dy}{dx} = \frac{2x + 12}{2 * \sqrt(x^2 + 12x + 61)} + \frac{2x - 12}{2 * \sqrt(x^2 - 12x + 157)} \,.
+\end{align}
+
+By simple factorization of 2 and Let $\frac{dy}{dx}=0$
+
+\begin{align}
+    \label{eq: irration}
+ 0 = \frac{x + 6}{(x^2 + 12x + 61)^\frac{1}{2}} + \frac{x - 6}{(x^2 - 12x + 157)^\frac{1}{2}} \,.
+\end{align}
+
+At this point it becomes impossible to solve for x because the values of x are complex(or imaginary) so, the root(s) of x are \textbf{unknown}.
+
+\begin{align}
+    \label{eq: solve_y}
+ y = (x^2 + 12x + 61)^\frac{1}{2} + (x^2 - 12x + 157)^\frac{1}{2} \,.
+\end{align}
+
+The minimum value of a real x is assumed to be  0
+
+Substituting $x = 0$ in \ref{eq: solve_y} we have the minimum value of y as:
+\begin{align}
+    \label{eq: final}
+ y = \sqrt{61} + \sqrt{157} \,.
+\end{align}
+
+Finally we have $y_{min} = (0, \sqrt{61} + \sqrt{157})$
 
 \end{document}

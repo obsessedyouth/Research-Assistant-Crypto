@@ -1,6 +1,6 @@
 package proth_theorem
 
 
-func Proth() string {
-	return "hello odd numbers"
+func Proth(N int64)(bool) {
+	return true
 }
