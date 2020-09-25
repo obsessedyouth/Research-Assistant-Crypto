@@ -4,7 +4,7 @@ I'm using `Latex` so the reader can parse the equations with the proper mathemat
 generally because I'm more comfortable writing equations using this.
 Although github's flavor of markdown does not render it, these are embedded snippets from
 [code cogs](https://www.codecogs.com/latex/eqneditor.php). You can find a pdf version with
-detail in the `root` of this repository as `Math.pdf` or the actual `tex` code in `equations`.
+detail in the `root` of this repository as [Math.pdf](https://github.com/obsessedyouth/Research-Assistant-Crypto/blob/main/Math.pdf) or the actual `tex` code in [equations](https://github.com/obsessedyouth/Research-Assistant-Crypto/blob/main/equations/Maths.tex).
 You can scan through this markdown as a summary, I didn't solve step by step here, but simply talk
 about my experience solving this problem.
 
