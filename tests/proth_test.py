@@ -6,6 +6,7 @@ sys.path.append("../solutions")
 from proth_theorem import proth
 # from solutions.proth_theorem import proth
 
+
 class ProthTest(unittest.TestCase):
 
     def test_3_proth_prime(self):

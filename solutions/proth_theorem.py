@@ -1,18 +1,10 @@
-sample_proth = [3, 5, 9, 13, 17, 25, 33, 41]
-
-
-# How to efficiently solve a ^ b mod c naive alternative :)
-# https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/fast-modular-exponentiation
-
-
-def proth(N):
+def proth(n):
     # where N is assumed to be of the form
-    # N = h(2^n) + 1
-    # given that h is odd AND 2^n > h > 0
+    # n = h(2^k) + 1
+    # given that h is odd AND 2^k > h > 0
 
-    # invalid proth number N >= 3
-    if (N < 3):
-        return "not a valid proth number"
+    if n < 3 or n % 2 == 0:
+        return False
 
     ###################
     # Proth's theorem #
@@ -28,33 +20,43 @@ def proth(N):
     # where a > 1
     a = 2
 
-    # A^b mod c
-    def matrix_mod(matrix, b, N):
-        if b == 0:
-            return  # identity matrix
-        elif b % 2 == 1:
-            return (A * matrix_mod(A, b - 1, N)) % N
+    # (a^p) % n
+    def binary_exp(a, p, n):
+        # edge case
+        if p < 0:
+            return binary_exp(1 / a, -p, n)
+        # base case
+        elif p == 0:
+            return 1
+        elif p == 1:
+            return a
+        # recursive case
+        elif p % 2 == 1:
+            bin_half = binary_exp(a, p // 2, n) % n
+            bin_half = ((bin_half * bin_half) * a) % n
+            return bin_half
 
-        D = matrix_mod(A, b / 2, N)
-        return (D * D) % N
+        bin_half = binary_exp(a, p // 2, n) % n
+        bin_half = (bin_half * bin_half) % n
+        return bin_half
 
     while searching:
-        # please be kind to this algorithm and your computer
-        # do not enter even numbers.
-        if a >= 10_000_000:
-            return "overflow potential"
-        else:
-            # (a^b) % N
-            b = (N - 1) / 2
-            # A = ["multi-dimensional array"]
-            rhs = matrix_mod(A, b, N)
-            lhs = -1 % N
+        if a == 12_000:
+            # approaching arbitrary search limit
+            # n = h(2^k) + 1
+            # 20_000 for h >= 33
+            # 12_000 for h >= 121
 
-            if rhs == lhs:
-                return True
-            a += 1
+            # experimental max a >= 1_000_000
+            # if you have the patience
+            return False
 
+        p = (n - 1) / 2
+        rhs = binary_exp(a, p, n)
+        lhs = -1 % n
+
+        if rhs == lhs:
+            return True
+
+        a += 1
     # https://en.wikipedia.org/wiki/Modular_exponentiation#Memory-efficient_method
-
-
-print(proth(3))
