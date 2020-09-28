@@ -1,8 +1,9 @@
 # Research-Assistant-Crypto
 
-Okay, Let's try this and see how far we can get :)
+~~Okay, Let's try this and see how far we can get :)~~ DONE 28/september/2020.
+
 If a kind human does get to read this and I do end up being rejected for whatever reason, I'd very much like feedback
-as to what I did not quite get right and how I can do better. This is a polite request :)
+as to what I did not quite get right and how I can do better.
 
 ## Rating the problems
 - basic(easy or little effort) :sleeping:
