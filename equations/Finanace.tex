@@ -39,14 +39,99 @@ The continuously-compounded risk-free rate is 3\%/year, the mean return on the
 stock is 7\%/year, and the standard deviation of the stock return is 40\%/year.
 What is the Black-Scholes call price?
 
-Given that the black-scholes model is
+Parameters given are (assuming the stock doesn't pay dividend it is assumed an American call option is equivalent to an European call option):
+
+Converting all parameters w.r.t. to 1 year:
+
+Given that:
+\begin{itemize}
+\item Black-Scholes call price = $(C)$
+\item  stock price$(S)$ = \$40
+\item call option strike$(X)$ = \$45
+\item  maturity$(T)$ = 4 months / 12 = 1/3
+\item continuously-compounded risk-free rate$(r_{f})$ = 3/100 = 0.03
+\item stock mean return$(\mu)$ = 7/100 = 0.07
+\item standard deviation($\sigma$) = 40/100 = 0.4
+\end{itemize}
+
+the linear black-scholes general form for an European style call option is:
 \begin{align}
-    \label{eq:black_scholes} % black-scholes model
-    N(x) = \frac{1}{\sqrt(2\pi)}\int_{-\infty }^{x}e^{\frac{-x^2}{2}}dz
+    \label{eq:call_option}
+    C(S, T) = SN(x_{1}) - BN(x_{2})
 \end{align}
 
-Let's dig in!!!!!! :)
+Where:
+\begin{align}
+   Bond price (B) = Xe^-r_{f} * T
+\end{align}
 
-So the solutions are $y=some value$ and $x = some value$.
+and $x_{1}$ is given by:
 
+\begin{align}
+  x_{1} = \frac{log(S/B)}{\sigma \sqrt{T}} + \frac{1}{2}\sigma \sqrt{T}
+\end{align}
+
+
+and to find $x_{2}$ from the value of $x_{1}$:
+
+\begin{align}
+  x_{2} = x_{1} - \sigma * \sqrt{T}
+\end{align}
+
+To find the value of $N(x)$ which is the cumulative normal distribution we use the integral form:
+
+\begin{align}
+    \label{eq:gaussian}
+    N(x) = \frac{1}{\sqrt(2\pi)}\int_{-\infty }^{x}e^{\frac{-u^2}{2}}du
+\end{align}
+
+First we find $B = Xe^-r_{f} * T = 40e^-0.03 * \frac{1}{3} $
+$B = 44.552243$
+
+Using this we find $x_{1}$
+
+\begin{align}
+  x_{1} = \frac{log(40/44.552243)}{0.4 \sqrt{1/3}} + \frac{1}{2} * 0.4 * \sqrt{1/3}
+\end{align}
+
+\begin{align}
+  = \frac{-0.10778304645914898}{0.2309401076758503} + (0.5 * 0.4 * 0.2309401076758503)
+\end{align}
+
+
+\begin{align}
+  x_{1}  \approx
+  -0.3512439362402078046572242 \approx -0.3512439
+\end{align}
+
+\begin{align}
+  x_{2}  = -0.3512439362402078046572242 - 0.4 * \sqrt{1/3} \approx
+  -0.5821840439160581104608837 \approx -0.5821840
+\end{align}
+
+Now we must find the Gaussian probability distribution functions of $N(x_{1})$ and $N(x_{2})$
+
+\begin{align}
+    \label{eq:gaussian_x_one}
+    N(x_{1}) = \frac{1}{\sqrt(2\pi)}\int_{-\infty }^{-0.3512439}e^{\frac{-u^2}{2}}du
+\end{align}
+
+\begin{align}
+    \label{eq:gaussian_x_two}
+    N(x_{1}) = \frac{1}{\sqrt(2\pi)}\int_{-\infty }^{-0.5821840}e^{\frac{-u^2}{2}}du
+\end{align}
+
+Sadly the cumulative difference function of a normal distribution does not have
+a closed form and CANNOT BE SOLVED analytically. The accuracy of the values produced by each estimation methods varies in accuracy. I'll be using a $Z-table$ or $Standard Normal Talbe$
+
+\begin{align}
+  N(x_{1}) = 0.3527026 N(x_{2}) = 0.2802213
+\end{align}
+
+Then finally substitution into the general form:
+\begin{align}
+    C(S, T) = 40 * 0.3627026 - 44.55224 * 0.2802213
+\end{align}
+
+The Black-Scholes call price is \approx \$2.02361738929
 \end{document}

@@ -41,7 +41,7 @@ func Proth(n int) bool {
 }
 
 func mod_negative(a, b int) int {
-	return (a%b + b) % b
+	return (a % b + b) % b
 }
 
 /*(a^p) % n  = a^p/2 % n * a^p/2 % n*/
