@@ -39,8 +39,8 @@ stock-to-flow model is inadequate in factoring the demand side of the equation.
 
 ## answer
 
-You can find details in [Finanace.pdf](https://github.com/obsessedyouth/Research-Assistant-Crypto/) w
-hich is separately rendered using `LaTex` or you can find the `tex` code
+You can find details in [Finanace.pdf](https://github.com/obsessedyouth/Research-Assistant-Crypto/) 
+which is separately rendered using `LaTex` or you can find the `tex` code
 [here](https://github.com/obsessedyouth/Research-Assistant-Crypto/blob/main/equations/Finanace.tex).
 
 ### What is a call option
